@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from "./Header";
+import Amount from "./Amount";
+import Currency from './Currency';
+import Buttons from './Buttons';
+import Note from './Note';
+import Result from './Result';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <body>
+      <fieldset className="fieldset">
+        <Header />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <Amount />
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <p>
+          <Currency />
+        </p>
+        <p>
+          <Buttons />
+        </p>
+      </fieldset>
+      <Note />
+      <Result />
+    </body>
+
   );
-}
+};
 
 export default App;
