@@ -1,8 +1,9 @@
 import React from "react";
 import "./style.css";
 
-const Result = (props) => (
-    <p className="result">WYNIK:</p>
+const Result = ({ result }) => (
+    <p className="result">WYNIK:{result}
+    </p>
 )
 
 export default Result;
