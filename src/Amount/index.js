@@ -1,11 +1,12 @@
 import React from "react";
 import "./style.css";
 
-const Amount = (props) => (
+const Amount = ({ amount, setAmount }) => (
     <label>
-        <span 
-        className="labelText">Kwota do przeliczenia*:</span>
+        <span
+            className="labelText">Kwota do przeliczenia*:</span>
         <input
+            value={amount}
             className="field"
             type="number"
             step="any"
