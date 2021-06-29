@@ -1,16 +1,24 @@
 import React from "react";
 import "./style.css";
+import { currencies } from './currencies';
 
 
 
-const Currency = (props) => (
+const Currency = ({ currency, setCurrency }) => (
   <label>
     <span className="labelText">Przelicz na*:</span>
-
-    <select className="field">
-      <option value="SEK" className="rateSEK">SEK - Korona szwedzka</option>
-      <option value="EUR" selected className="rateEUR">EUR - Euro</option>
-      <option value="USD" className="rateUSD">USD - Dolar amerykański</option>
+    <select
+      className="field"
+      value={currency}
+    >
+      {currencies.map((currency => (
+        <option
+          key={currency.short}
+          value={currency.short}
+        >
+          {currency.name}
+        </option>
+      )))}
     </select>
   </label>
 )
