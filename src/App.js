@@ -11,8 +11,8 @@ import { currencies } from './Currency/currencies';
 function App() {
 
   const initialResult = {
-    targetAmount: 0,
-    currency: currencies[0].short,
+    targetAmount: " ",
+    currency: currencies.short,
   };
 
   const [result, setResult] = useState(initialResult);
@@ -25,7 +25,7 @@ function App() {
       .rate;
 
     setResult({
-      targetAmount: amount / rate,
+      targetAmount: (amount / rate).toFixed(2),
       currency: currency,
     });
   };
