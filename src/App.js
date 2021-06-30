@@ -10,8 +10,13 @@ import { currencies } from './Currency/currencies';
 
 function App() {
 
-  const [result, setResult] = useState();
-  const [amount, setAmount] = useState();
+  const initialResult = {
+    targetAmount: 0,
+    currency: currencies[0].short,
+  }
+
+  const [result, setResult] = useState(initialResult);
+  const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState(currencies[0].short);
 
   const calculateResult = (currency, amount) => {
@@ -21,13 +26,18 @@ function App() {
 
     setResult({
       targetAmount: amount / rate,
-      currency,
-    })
+      currency: currency,
+    });
   };
 
   const onSubmit = (event) => {
     event.preventDefault();
     calculateResult(currency, amount);
+  };
+
+  const resetForm = () => {
+    setResult(initialResult);
+    setAmount(0);
   };
 
   return (
@@ -46,7 +56,8 @@ function App() {
         </p>
         <p>
           <Buttons
-            calculateResult={calculateResult} />
+          resetForm={resetForm} 
+          />
         </p>
       </fieldset>
       <Note />
@@ -56,5 +67,4 @@ function App() {
 
   );
 };
-
 export default App;
