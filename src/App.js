@@ -13,7 +13,7 @@ function App() {
   const initialResult = {
     targetAmount: 0,
     currency: currencies[0].short,
-  }
+  };
 
   const [result, setResult] = useState(initialResult);
   const [amount, setAmount] = useState("");
@@ -56,8 +56,7 @@ function App() {
         </p>
         <p>
           <Buttons
-          resetForm={resetForm} 
-          />
+            resetForm={resetForm} />
         </p>
       </fieldset>
       <Note />
