@@ -7,11 +7,12 @@ const Amount = ({ amount, setAmount }) => (
             className="labelText">Kwota do przeliczenia*:</span>
         <input
             value={amount}
+            onChange={({ target }) => setAmount(target.value)}
             className="field"
             type="number"
-            step="any"
+            step="0.01"
             placeholder="Kwota PLN"
-            required min="0" />
+            required />
     </label>
 )
 
