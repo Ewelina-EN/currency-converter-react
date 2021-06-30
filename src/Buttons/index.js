@@ -1,10 +1,16 @@
 import React from "react";
 import "./style.css";
 
-const Buttons = (props) => (
+
+const Buttons = ({ resetForm }) => (
     <>
-    <button className="button ">Przelicz</button>
-    <button type="reset" className="button">Wyczyść</button>
+        <button className="button">Przelicz
+        </button>
+        <button
+            type="reset"
+            className="button"
+            onClick={resetForm}
+        >Wyczyść</button>
     </>
 )
 
