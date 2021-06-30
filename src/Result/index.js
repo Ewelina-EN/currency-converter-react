@@ -3,7 +3,11 @@ import "./style.css";
 
 const Result = ({ result }) => (
     <p className="result">
-        WYNIK: {result.targetAmount} {result.currency}
+        WYNIK:{" "}
+        <strong>
+            {result.targetAmount}
+            {result.currency}
+        </strong>
     </p>
 
 )
