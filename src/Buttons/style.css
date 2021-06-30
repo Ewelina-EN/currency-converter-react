@@ -8,9 +8,9 @@
 }
 
 .button:hover {
-    background-color: #1c5961;
+    background-color: #1c2161ed;
 }
 
 .button:active {
-    background-color: #056359;
+    background-color: hsl(236deg 55% 25% / 70%);
 }
