@@ -10,6 +10,7 @@ const Currency = ({ currency, setCurrency }) => (
     <select
       className="field"
       value={currency}
+      onChange={({ target }) => setCurrency(target.value)}
     >
       {currencies.map((currency => (
         <option
