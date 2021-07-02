@@ -1,7 +1,8 @@
 .labelText {
-    color: #0f2637;
-    max-width: 150px;
+    color: black;
     display: inline-block;
+    width: 100%;
+    max-width: 150px;
     margin-right: 5px;
     text-align: center;
 }
