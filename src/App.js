@@ -6,9 +6,23 @@ import Buttons from './Buttons';
 import Note from './Note';
 import Result from './Result';
 import { currencies } from './Currency/currencies';
+import Clock from './Clock';
 
 
 function App() {
+
+  const myDate = new Date();
+  const formattedDate = myDate.toLocaleDateString(undefined, {
+    day: "numeric",
+    weekday: "long",
+    month: "long",
+    year: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+  });
+
+  const [date, setDate] = useState(formattedDate);
 
   const initialResult = {
     targetAmount: " ",
@@ -18,6 +32,7 @@ function App() {
   const [result, setResult] = useState(initialResult);
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState(currencies[0].short);
+
 
   const calculateResult = (currency, amount) => {
     const rate = currencies
@@ -40,10 +55,16 @@ function App() {
     setAmount(0);
   };
 
+
+
   return (
     <form className="form" onSubmit={onSubmit} >
       <fieldset className="form__fieldset">
         <Header />
+        <Clock
+          date={date}
+          setDate={setDate}
+        />
         <p>
           <Amount
             amount={amount}
