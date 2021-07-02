@@ -41,8 +41,8 @@ function App() {
   };
 
   return (
-    <form onSubmit={onSubmit} >
-      <fieldset className="fieldset">
+    <form className="form" onSubmit={onSubmit} >
+      <fieldset className="form__fieldset">
         <Header />
         <p>
           <Amount
