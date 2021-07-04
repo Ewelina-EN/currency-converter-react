@@ -11,19 +11,6 @@ import Clock from './Clock';
 
 function App() {
 
-  const myDate = new Date();
-  const formattedDate = myDate.toLocaleDateString(undefined, {
-    day: "numeric",
-    weekday: "long",
-    month: "long",
-    year: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-    second: "numeric",
-  });
-
-  const [date, setDate] = useState(formattedDate);
-
   const initialResult = {
     targetAmount: " ",
     currency: currencies.short,
@@ -56,15 +43,11 @@ function App() {
   };
 
 
-
   return (
     <form className="form" onSubmit={onSubmit} >
       <fieldset className="form__fieldset">
         <Header />
-        <Clock
-          date={date}
-          setDate={setDate}
-        />
+        <Clock />
         <p>
           <Amount
             amount={amount}
