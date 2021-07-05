@@ -8,7 +8,6 @@ import Result from './Result';
 import { currencies } from './Currency/currencies';
 import Clock from './Clock';
 
-
 function App() {
 
   const initialResult = {
@@ -19,7 +18,6 @@ function App() {
   const [result, setResult] = useState(initialResult);
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState(currencies[0].short);
-
 
   const calculateResult = (currency, amount) => {
     const rate = currencies
@@ -41,7 +39,6 @@ function App() {
     setResult(initialResult);
     setAmount(0);
   };
-
 
   return (
     <form className="form" onSubmit={onSubmit} >
@@ -67,7 +64,6 @@ function App() {
       <Result
         result={result} />
     </form>
-
   );
 };
 export default App;

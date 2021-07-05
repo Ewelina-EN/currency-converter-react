@@ -4,7 +4,8 @@ import "./style.css";
 const Amount = ({ amount, setAmount }) => (
     <label>
         <span
-            className="labelText">Kwota do przeliczenia*:</span>
+            className="labelText">Kwota do przeliczenia*:
+        </span>
         <input
             value={amount}
             onChange={({ target }) => setAmount(target.value)}
@@ -12,7 +13,8 @@ const Amount = ({ amount, setAmount }) => (
             type="number"
             step="0.01"
             placeholder="Kwota PLN"
-            required />
+            required
+        />
     </label>
 )
 
