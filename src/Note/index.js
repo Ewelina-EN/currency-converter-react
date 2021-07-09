@@ -1,10 +1,10 @@
 import React from "react";
-import "./style.css";
+import { StyledNote } from "./styled";
 
 const Note = (props) => (
-    <p className="note">
+    <StyledNote>
         Pola z oznaczeniem * wymagają wypełnienia
-    </p>
+    </StyledNote>
 )
 
 export default Note;
