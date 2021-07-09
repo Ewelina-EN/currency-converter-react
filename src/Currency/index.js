@@ -1,14 +1,13 @@
 import React from "react";
-import "./style.css";
 import { currencies } from './currencies';
-
-
+import { CurrencySelect, LabelText } from "./styled";
 
 const Currency = ({ currency, setCurrency }) => (
   <label>
-    <span className="labelText">Przelicz na*:</span>
-    <select
-      className="field"
+    <LabelText>
+      Przelicz na*:
+    </LabelText>
+    <CurrencySelect
       value={currency}
       onChange={({ target }) => setCurrency(target.value)}
     >
@@ -20,7 +19,7 @@ const Currency = ({ currency, setCurrency }) => (
           {currency.name}
         </option>
       )))}
-    </select>
+    </CurrencySelect>
   </label>
 )
 
