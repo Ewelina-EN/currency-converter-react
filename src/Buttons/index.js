@@ -1,16 +1,18 @@
 import React from "react";
-import "./style.css";
+import { StyledButton } from "./styled";
 
 const Buttons = ({ resetForm }) => (
     <>
-        <button className="button">Przelicz
-        </button>
-        <button
+        <StyledButton>
+            Przelicz   
+        </StyledButton>
+        <StyledButton
             type="reset"
             className="button"
             onClick={resetForm}
         >
-            Wyczyść</button>
+            Wyczyść
+        </StyledButton>
     </>
 );
 
