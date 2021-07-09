@@ -1,10 +1,10 @@
 import React from "react";
-import "./style.css";
+import { StyledLegend } from "./styled";
 
 const Header = (props) => (
-    <legend className="legend">
+    <StyledLegend>
         KALKULATOR WALUTOWY
-    </legend>
+    </StyledLegend>
 );
 
 export default Header;
