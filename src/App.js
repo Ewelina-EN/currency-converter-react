@@ -7,6 +7,7 @@ import Note from './Note';
 import Result from './Result';
 import { currencies } from './Currency/currencies';
 import Clock from './Clock';
+import { Fieldset, Form } from "./styled";
 
 function App() {
 
@@ -41,8 +42,9 @@ function App() {
   };
 
   return (
-    <form className="form" onSubmit={onSubmit} >
-      <fieldset className="form__fieldset">
+    <Form 
+      onSubmit={onSubmit} >
+      <Fieldset>
         <Header />
         <Clock />
         <p>
@@ -59,11 +61,11 @@ function App() {
           <Buttons
             resetForm={resetForm} />
         </p>
-      </fieldset>
+      </Fieldset>
       <Note />
       <Result
         result={result} />
-    </form>
+    </Form>
   );
 };
 export default App;
