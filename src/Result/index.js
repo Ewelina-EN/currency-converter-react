@@ -1,14 +1,14 @@
 import React from "react";
-import "./style.css";
+import { StyledResult } from "./styled";
 
 const Result = ({ result }) => (
-    <p className="result">
+    <StyledResult>
         WYNIK:{" "}
         <strong>
             {result.targetAmount}
             {result.currency}
         </strong>
-    </p>
+    </StyledResult>
 
 )
 export default Result;

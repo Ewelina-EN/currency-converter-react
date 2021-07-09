@@ -1,4 +1,6 @@
-.result {
+import styled from "styled-components";
+
+export const StyledResult = styled.p`
     background-color: #0f2637;
     border: 2px solid black;
     color: white;
@@ -7,4 +9,4 @@
     padding: 10px;
     border-radius: 10px;
     text-align: center;
-}
+`;
