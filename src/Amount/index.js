@@ -1,15 +1,13 @@
 import React from "react";
-import "./style.css";
+import { LabelText, AmountInpunt } from "./styled";
 
 const Amount = ({ amount, setAmount }) => (
     <label>
-        <span
-            className="labelText">Kwota do przeliczenia*:
-        </span>
-        <input
+        <LabelText>Kwota do przeliczenia*:
+        </LabelText>
+        <AmountInpunt
             value={amount}
             onChange={({ target }) => setAmount(target.value)}
-            className="field"
             type="number"
             step="0.01"
             placeholder="Kwota PLN"
