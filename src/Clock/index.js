@@ -7,8 +7,11 @@ const Clock = () => {
 
     return (
         <StyledClock>
+            Dzisiaj jest
+            {" "}
             {date}
-        </StyledClock>)
+        </StyledClock>
+    );
 };
 
 export default Clock;
