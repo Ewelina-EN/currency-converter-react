@@ -14,6 +14,6 @@ const Amount = ({ amount, setAmount }) => (
             required
         />
     </label>
-)
+);
 
 export default Amount;
