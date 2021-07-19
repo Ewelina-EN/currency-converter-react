@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const LabelText = styled.span`
-    color: black;
+    color: ${({ theme }) => theme.color.black};
     display: inline-block;
     width: 100%;
     max-width: 150px;
@@ -10,8 +10,8 @@ export const LabelText = styled.span`
 `;
 
 export const CurrencySelect = styled.select`
-    border: 1px solid #ccc;
-    border-color: black;
+    border: 1px solid ${({ theme }) => theme.color.lightGrey};
+    border-color: ${({ theme }) => theme.color.black};
     padding: 10px;
     width: 100%;
     max-width: 400px;

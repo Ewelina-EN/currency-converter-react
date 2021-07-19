@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
 export const StyledNote = styled.p`
-    color: #ffffff;
+    color: ${({ theme }) => theme.color.white};
     text-align: center;
 `;
