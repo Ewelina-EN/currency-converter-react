@@ -1,8 +1,7 @@
 import React from "react";
-import { currencies } from './currencies';
 import { CurrencySelect, LabelText } from "./styled";
 
-const Currency = ({ currency, setCurrency }) => (
+const Currency = ({ currency, rates, setCurrency }) => (
   <label>
     <LabelText>
       Przelicz na*:
@@ -11,12 +10,12 @@ const Currency = ({ currency, setCurrency }) => (
       value={currency}
       onChange={({ target }) => setCurrency(target.value)}
     >
-      {currencies.map((currency => (
+      {rates.map((rate => (
         <option
-          key={currency.short}
-          value={currency.short}
+          key={rate.short}
+          value={rate.short}
         >
-          {currency.name}
+          {rate.short}
         </option>
       )))}
     </CurrencySelect>

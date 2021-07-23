@@ -5,23 +5,25 @@ import Currency from './Currency';
 import Buttons from './Buttons';
 import Note from './Note';
 import Result from './Result';
-import { currencies } from './Currency/currencies';
 import Clock from './Clock';
 import { Fieldset, Form } from "./styled";
+import { useRatesAPI } from './useRatesAPI';
+
 
 function App() {
 
   const initialResult = {
     targetAmount: " ",
-    currency: currencies.short,
+    currency:
+      'USD',
   };
-
+  const rates = useRatesAPI();
   const [result, setResult] = useState(initialResult);
   const [amount, setAmount] = useState("");
-  const [currency, setCurrency] = useState(currencies[0].short);
+  const [currency, setCurrency] = useState();
 
   const calculateResult = (currency, amount) => {
-    const rate = currencies
+    const rate = rates.rates
       .find(({ short }) => short === currency)
       .rate;
 
@@ -42,7 +44,7 @@ function App() {
   };
 
   return (
-    <Form 
+    <Form
       onSubmit={onSubmit} >
       <Fieldset>
         <Header />
@@ -54,6 +56,7 @@ function App() {
         </p>
         <p>
           <Currency
+            rates={rates.rates}
             currency={currency}
             setCurrency={setCurrency} />
         </p>
