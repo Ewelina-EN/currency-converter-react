@@ -2,7 +2,6 @@ import React from 'react';
 import { StyledClock } from "./styled";
 import { useCurrentDate } from "./useCurrentDate";
 
-
 const formatDate = (date) => date.toLocaleDateString(undefined, {
     day: "numeric",
     weekday: "long",

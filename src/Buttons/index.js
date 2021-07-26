@@ -4,7 +4,7 @@ import { StyledButton } from "./styled";
 const Buttons = ({ resetForm }) => (
     <>
         <StyledButton>
-            Przelicz   
+            Przelicz
         </StyledButton>
         <StyledButton
             type="reset"
