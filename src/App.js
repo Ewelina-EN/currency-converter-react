@@ -8,7 +8,7 @@ import Result from './Result';
 import Clock from './Clock';
 import { Fieldset, Form } from "./styled";
 import { useRatesAPI } from './useRatesAPI';
-
+import ConnectionHandler from './ConnectionHandler';
 
 function App() {
 
@@ -26,7 +26,6 @@ function App() {
     const rate = rates.rates
       .find(({ short }) => short === currency)
       .rate;
-
     setResult({
       targetAmount: (amount / rate).toFixed(2),
       currency: currency,
@@ -45,29 +44,36 @@ function App() {
 
   return (
     <Form
-      onSubmit={onSubmit} >
-      <Fieldset>
-        <Header />
-        <Clock />
-        <p>
-          <Amount
-            amount={amount}
-            setAmount={setAmount} />
-        </p>
-        <p>
-          <Currency
-            rates={rates.rates}
-            currency={currency}
-            setCurrency={setCurrency} />
-        </p>
-        <p>
-          <Buttons
-            resetForm={resetForm} />
-        </p>
-      </Fieldset>
-      <Note />
-      <Result
-        result={result} />
+      onSubmit={onSubmit}>
+      {rates.state !== "ok" ? (
+        <ConnectionHandler rates={rates} />
+      ) : (
+        <>
+          <Fieldset>
+            <Header />
+            <Clock />
+            <p>
+              <Amount
+                amount={amount}
+                setAmount={setAmount} />
+            </p>
+            <p>
+              <Currency
+                rates={rates.rates}
+                currency={currency}
+                setCurrency={setCurrency} />
+            </p>
+            <p>
+              <Buttons
+                resetForm={resetForm} />
+            </p>
+          </Fieldset>
+          <Note
+            rates={rates}
+          />
+          <Result
+            result={result} />
+        </>)};
     </Form>
   );
 };
