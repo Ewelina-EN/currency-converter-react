@@ -6,6 +6,7 @@ const Result = ({ result }) => (
         WYNIK:{" "}
         <strong>
             {result.targetAmount}
+            {" "}
             {result.currency}
         </strong>
     </StyledResult>
