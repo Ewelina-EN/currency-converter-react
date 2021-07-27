@@ -15,12 +15,12 @@ function App() {
   const initialResult = {
     targetAmount: " ",
     currency:
-      'USD',
+      ' ',
   };
   const rates = useRatesAPI();
   const [result, setResult] = useState(initialResult);
   const [amount, setAmount] = useState("");
-  const [currency, setCurrency] = useState();
+  const [currency, setCurrency] = useState(initialResult.currency);
 
   const calculateResult = (currency, amount) => {
     const rate = rates.rates
