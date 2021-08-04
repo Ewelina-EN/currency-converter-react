@@ -9,6 +9,7 @@ const Amount = ({ amount, setAmount }) => (
             value={amount}
             onChange={({ target }) => setAmount(target.value)}
             type="number"
+            min="0"
             step="0.01"
             placeholder="Kwota PLN"
             required
