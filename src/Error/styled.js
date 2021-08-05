@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledConnectionHandler = styled.fieldset`
+export const StyledError = styled.fieldset`
     text-align: center;
     margin: 20px auto;
     padding: 20px 0 20px;

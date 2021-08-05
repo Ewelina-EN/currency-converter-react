@@ -1,10 +1,10 @@
 import React from "react";
-import { StyledConnectionHandler } from "./styled";
+import { StyledLoading } from "./styled";
 
-const Loading = (props) => (
-    <StyledConnectionHandler>
+const Loading = () => (
+    <StyledLoading>
         Chwila cierpliwości...Ładuję kursy walut z Europejskiego Banku Centralnego ⏳
-    </StyledConnectionHandler>
+    </StyledLoading>
 );
 
 export default Loading;

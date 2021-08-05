@@ -8,7 +8,8 @@ import Result from './Result';
 import Clock from './Clock';
 import { Fieldset, Form } from "./styled";
 import { useRatesAPI } from './useRatesAPI';
-import ConnectionHandler from './ConnectionHandler';
+import Loading from './Loading/loading';
+import Error from './Error/error';
 
 function App() {
 
@@ -42,13 +43,17 @@ function App() {
     setAmount(0);
   };
 
-  return (
-    <Form
-      onSubmit={onSubmit}>
-      {rates.state !== "ok" ? (
-        <ConnectionHandler rates={rates} />
-      ) : (
-        <>
+  if (rates.state === "loading")
+    return Loading();
+
+  else if (rates.state === "error")
+    return Error();
+
+  else {
+    return (
+      <>
+        <Form
+          onSubmit={onSubmit}>
           <Fieldset>
             <Header />
             <Clock />
@@ -73,8 +78,9 @@ function App() {
           />
           <Result
             result={result} />
-        </>)};
-    </Form>
-  );
+        </Form>
+      </>
+    );
+  };
 };
 export default App;
