@@ -14,7 +14,6 @@ export const useRatesAPI = () => {
             fetch(currenciesAPIUrl)
                 .then(response => {
                     if (!response.ok) {
-                        console.log(response.statusText);
                         throw new Error(response.statusText);
                     }
                     return response;
