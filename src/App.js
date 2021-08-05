@@ -15,8 +15,8 @@ function App() {
 
   const initialResult = {
     targetAmount: " ",
-    currency:
-      ' ',
+    currency: 
+      'USD',
   };
   const rates = useRatesAPI();
   const [result, setResult] = useState(initialResult);
