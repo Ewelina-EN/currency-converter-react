@@ -28,7 +28,7 @@ function App() {
       .find(({ short }) => short === currency)
       .rate;
     setResult({
-      targetAmount: (amount / rate).toFixed(2),
+      targetAmount: (amount * rate).toFixed(2),
       currency: currency,
     });
   };
