@@ -2,36 +2,29 @@
 
 Click on the link to see how it works || https://ewelina-en.github.io/currency-converter-react/
 
-## General information
-
-A simple application where you could easily calculate currency rate to another one like:
-1. EUR (euro)
-2. USD ( US Dollar)
-3. SEK (Swedish krona). 
-
+Simple app which fetches current rates for chosen currency from the API and allows you to quickly calculate expected value in another currency.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Short instruction
-1. Please write a default amount in PLN
+## Short description
+
+1. Write a default amount in PLN
 2. Then choose an appropriate currency
 3. Click "Przelicz"
 
-## Tools
+## Technologies
 
-- Semantic HTML
+- HTML
 - CSS (grid/ flexbox/ media queries)
 - BEM naming
 - ES6+ features
+- Fetch API
 - Immutability
-- React
+- React.js
 - Webpack
 - Babel
-
 ## Other information
 
 Project done as a part of front-end development course at YouCode.
-
-
 ## Available Scripts
 
 In the project directory, you can run:
