@@ -1,5 +1,9 @@
 # Currency Converter in React.js
 
+- Author: Ewelina Niewęgłowska
+- June 22, 2021
+
+## DEMO
 Click on the link to see how it works || https://ewelina-en.github.io/currency-converter-react/
 
 Simple app which fetches current rates for chosen currency from the API and allows you to quickly calculate expected value in another currency.
@@ -22,9 +26,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - React.js
 - Webpack
 - Babel
+
 ## Other information
 
 Project done as a part of front-end development course at YouCode.
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -45,4 +51,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
